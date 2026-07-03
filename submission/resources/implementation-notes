@@ -1,0 +1,24 @@
+Implementation Notes - CAT 2 JavaScript Features
+
+1. Loop-rendered dynamic content
+   - Pricing list data moved into a JS array of objects (pricingItems) in script.js
+   - Rendered into the <ul id="pricing-list"> using forEach(), createElement(), and appendChild()
+
+2. Dynamically add & remove elements
+   - "Build Your Order" wishlist section added below Featured Cakes
+   - Typing an item and clicking "Add to Order" creates a new <li> with createElement()
+   - Each item has its own Remove button using an event listener that calls li.remove()
+
+3. Form handling with validation feedback
+   - "Request a Custom Order" form added before the Contact section
+   - Uses event.preventDefault() to stop page reload on submit
+   - Reads .value from name and order details inputs
+   - Shows red error text if fields are empty, green confirmation message if valid
+
+4. Persistent state with localStorage
+   - Customer's name from the order form is saved with localStorage.setItem()
+   - On page load, localStorage.getItem() checks for a saved name and pre-fills the input
+
+5. Click-to-reveal banner
+   - Clicking the banner image toggles a "hidden" class on a caption paragraph
+   - Uses classList.toggle() to show/hide the caption text
